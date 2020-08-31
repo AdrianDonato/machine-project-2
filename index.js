@@ -24,6 +24,11 @@ app.get("/", function(req, res){
     }
 })
 
+app.get("/signout", function(req, res){
+    req.session.destroy()
+    res.redirect("/")
+})
+
 app.listen(3000, function(){
     console.log("listening to port 3000")
 })

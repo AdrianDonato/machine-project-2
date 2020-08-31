@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <style>
+            .navbar{
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto auto auto;
+                height: 30px;
+                padding-top: 10px;
+                padding-bottom: 10px; 
+                align-content: center;  
+                color: #ffffff;
+                background-color: #292929;
+                font-family: sans-serif;
+                font-size : 20px;
+            }
+            .navbar.search select, .navbar.search button{
+                height: 20px;
+            }
+            .navbar a{
+                color: #ffffff;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    
+    <body>
+         <div class = "navbar">
+            <div class = "logo"></div>
+            <span id = "siteName">inSite</span>
+            <div class = "search">
+                <input type = "text" placeholder = "Search Websites..." name = "searchbar">
+                <select id = "categories">
+                    <option value = "all">All Categories</option>
+                    <option value = "social">Social Media</option>
+                    <option value = "ecommerce">E-Commerce</option>
+                    <option value = "news">News Sites</option>
+                    <option value = "blogs">Blogs</option>
+                    <option value = "info">Informational</option> 
+                    <option value = "entertainment">Enter</option>
+                </select>
+                <button type = "submit">Submit</button>
+            </div>
+            <a href = "">SUBMIT A WEBSITE</a>
+            <a href = "">SIGN UP</a>
+            <a href = "">LOG IN</a>
+        </div>
+
+        <div class = "content">
+            <div class = "rating">
+                <h4>Ratings</h4>
+                <label for = "design">Design</label>
+                <input type = "range" min = "0" max = "10" name = "design">
+                <label for = "usability">Usability</label>
+                <input type = "range" min = "0" max = "10"  name = "usability">
+                <label for = "creativity">Creativty</label>
+                <input type = "range" min = "0" max = "10"  name = "creativity">
+                <label for = "content">Content</label>
+                <input type = "range" min = "0" max = "10"  name = "content">
+                <label for = "trust">Trustworthiness</label>
+                <input type = "range" min = "0" max = "10"  name = "trust">
+            </div>
+            <h4>Review</h4>
+            <textarea name = "review" ></textarea>
+        </div>
+    </body>
+</html>

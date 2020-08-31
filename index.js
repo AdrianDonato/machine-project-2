@@ -17,6 +17,14 @@ app.use(session({
     }
 }))
 
+app.get("/", function(req, res){
+    if (req.session.username){
+    }
+    else{
+    }
+})
+
 app.listen(3000, function(){
     console.log("listening to port 3000")
 })
+

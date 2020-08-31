@@ -19,8 +19,16 @@ app.use(session({
 
 app.get("/", function(req, res){
     if (req.session.username){
+        res.render("index.hbs",{
+            rightoption1: "SIGN UP",
+            rightoption2: "LOG IN"
+        })
     }
     else{
+        res.render("index.hbs",{
+            rightoption1: "ACCOUNT",
+            rightoption2: "LOG OUT"
+        })
     }
 })
 

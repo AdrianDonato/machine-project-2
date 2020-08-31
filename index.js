@@ -32,6 +32,19 @@ app.get("/", function(req, res){
     }
 })
 
+app.post("/register", urlencoder, function (req,res){
+    let username = req.body.un
+    let password = req.body.pw
+})
+
+app.post("/login", urlencoder, function (req, res){
+    req.session.username = req.body.un
+    res.render("index.hbs",{
+       rightoption1: "ACCOUNT",
+       rightoption2: "LOG OUT"
+    })
+})
+
 app.get("/signout", function(req, res){
     req.session.destroy()
     res.redirect("/")

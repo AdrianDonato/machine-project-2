@@ -24,27 +24,30 @@
             <a>{{rightoption2}}</a>
         </div>
 
-        <h1>Register</h1>
-        {{#if error}}
-            <div class="error">{{error}}</div>
-        {{/if}}
-
-        <form method="POST" action="register">
-            <label for = "un">Username</label>
-                <input type = "text" placeholder="Enter Username" name ="un" required>
-            <label for = "email">E-mail</label>
-                <input type = "email" placeholder="Enter E-mail" name ="email" required>
-            <label for = "pw">Password</label>
-                <input type = "password" placeholder="Enter Password" name ="pw" required>
-            <label for = "vpw">Verify Password</label>
-                <input type = "password" placeholder="Verify Password" name ="vpw" required>     
-            <label for = "fname">First Name</label>
-                <input type = "text" placeholder="Enter First Name" name ="fname">
-            <label for = "lname">Last Name</label>
-                <input type = "text" placeholder="Enter Last Name" name ="lname">
-            <label for = "userImg">Profile Picture</label>
-                <input type = "file" name = "userImg" accept = "image/*">
-            <input type="submit" value="register">   
-        </form>
+        <div class="content">
+            <div class="registerbox">
+                <h1>Register</h1>
+                {{#if error}}
+                <div class="error">{{error}}</div>
+                {{/if}}
+                <form method="POST" action="register">
+                <label for = "un">Username</label>
+                    <input type = "text" placeholder="Enter Username" name ="un" required>
+                <label for = "email">E-mail</label>
+                    <input type = "email" placeholder="Enter E-mail" name ="email" required>
+                <label for = "pw">Password</label>
+                    <input type = "password" placeholder="Enter Password" name ="pw" required>
+                <label for = "vpw">Verify Password</label>
+                    <input type = "password" placeholder="Verify Password" name ="vpw" required>     
+                <label for = "fname">First Name</label>
+                    <input type = "text" placeholder="Enter First Name" name ="fname">
+                <label for = "lname">Last Name</label>
+                    <input type = "text" placeholder="Enter Last Name" name ="lname">
+                <label for = "userImg">Profile Picture</label>
+                    <input type = "file" name = "userImg" accept = "image/*">
+                <input type="submit" value="register">   
+                </form>
+            </div> 
+        </div>   
     </body>
 </html>

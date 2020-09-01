@@ -21,16 +21,18 @@
             <a>SIGN UP</a>
             <a>LOG IN</a>
         </div>
-        <div class= "loginbox">
-            LOGIN<br>
-            {{#if error}}
-                {{error}}
-            {{/if}}
-            <form method="post" action="login">
-                Email <input type="email" name="em"><br>
-                Password <input type="password" name="pw"><br>
-                <input type="submit" value="login">
-            </form>
-        </div>
+        <div class="content">
+            <div class="loginbox">
+                LOGIN<br>
+                {{#if error}}
+                    {{error}}
+                {{/if}}
+                <form method="post" action="login">
+                    Email <input type="email" name="em"><br>
+                    Password <input type="password" name="pw"><br>
+                    <input type="submit" value="login">
+                </form>
+            </div>
+        </div>  
     </body>    
 </html>

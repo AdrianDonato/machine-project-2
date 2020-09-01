@@ -1,0 +1,37 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div class = "navbar">
+            <div class = "logo"></div>
+            <div>inSite</div>
+            <input type = "text" name = "searchbar">
+            <select id = "categories">
+                <option>All Categories</option>
+                <option>Social Media</option>
+                <option>E-Commerce</option>
+                <option>News Sites</option>
+                <option>Blogs</option>
+                <option>Informational</option> 
+                <option>Entertainment</option> 
+            </select>
+            <button type = "submit">Submit</button>
+            <a>SUBMIT A WEBSITE</a>
+            <!-- rightoption1: either sign up or account, rightoption2: either log in or log out -->
+            <a>USER PROFILE</a>
+            <a>LOG OUT</a>
+        </div>
+        <div class = "content">
+            <div class = "editprofile">
+                <form method = "post" action = "updateprofile">
+                    <h2>EDIT USER PROFILE</h2>
+                    <!-- Username: <input type = "text" val = "" name = "un"> -->
+                    Email: <input type = "email" val = "{{email}}" name = "em">
+                    Full Name: <input type = "text" val = "{{firstname}}" name = "fname">
+                    Full Name: <input type = "text" val = "{{firstname}}" name = "lname">
+                    Occuptation: <input type = "text" val = "{{occupation}}" name = "oc">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -39,10 +39,7 @@ app.post("/register", urlencoder, function (req,res){
 
 app.post("/login", urlencoder, function (req, res){
     req.session.username = req.body.un
-    res.render("index.hbs",{
-       rightoption1: "ACCOUNT",
-       rightoption2: "LOG OUT"
-    })
+    res.redirect("/")
 })
 
 app.get("/signout", function(req, res){

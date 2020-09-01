@@ -1,0 +1,38 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div class = "navbar">
+            <div class = "logo"></div>
+            <div>inSite</div>
+            <input type = "text" name = "searchbar">
+            <select id = "categories">
+                <option>All Categories</option>
+                <option>Social Media</option>
+                <option>E-Commerce</option>
+                <option>News Sites</option>
+                <option>Blogs</option>
+                <option>Informational</option> 
+                <option>Entertainment</option> 
+            </select>
+            <button type = "submit">Submit</button>
+            <a>SUBMIT A WEBSITE</a>
+            <!-- rightoption1: either sign up or account, rightoption2: either log in or log out -->
+            <a>SIGN UP</a>
+            <a>LOG IN</a>
+        </div>
+        <div class="content">
+            <div class="loginbox">
+                LOGIN<br>
+                {{#if error}}
+                    {{error}}
+                {{/if}}
+                <form method="post" action="login">
+                    Username <input type="text" name="un"><br>
+                    Password <input type="password" name="pw"><br>
+                    <input type="submit" value="login">
+                </form>
+            </div>
+        </div>  
+    </body>    
+</html>

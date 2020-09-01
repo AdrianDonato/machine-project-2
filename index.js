@@ -38,11 +38,17 @@ app.post("/register", urlencoder, function (req,res){
 })
 
 app.post("/login", urlencoder, function (req, res){
-    req.session.username = req.body.un
-    res.render("index.hbs",{
-       rightoption1: "ACCOUNT",
-       rightoption2: "LOG OUT"
-    })
+    let username = req.body.un
+    let password = req.body.pw
+    
+    if (username.trim()=="" || password.trim()==""){
+        res.render("login.hbs",{
+            error:"Please input the empty field/s."
+        })
+    }else{
+        req.session.username = req.body.un
+        res.redirect("/")
+    }
 })
 
 app.get("/signout", function(req, res){

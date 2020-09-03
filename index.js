@@ -41,6 +41,10 @@ app.get("/loginpage", function(req,res)
     res.render("login.hbs")
 })
 
+app.get("/search", function(req,res){
+    res.render("search.hbs")
+})
+
 app.get("/submitsite", function(req,res){
     res.render("submitsite.hbs")
 })

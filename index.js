@@ -57,12 +57,17 @@ app.get("/registerpage", function(req,res)
 app.post("/register", urlencoder, function (req,res){
     let username = req.body.un
     let password = req.body.pw
-    let email = req.body.em
+    let verifiedpw = req.body.vpw
+    let email = req.body.email
 
     
     if (username.trim()=="" || password.trim()=="" || email.trim()==""){
         res.render("register.hbs",{
             error:"Please input the empty field/s."
+        })
+    }else if(password != verifiedpw){
+        res.render("register.hbs",{
+            error:"Password verification is incorrect."
         })
     }else{
         req.session.username = req.body.un

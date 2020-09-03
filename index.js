@@ -29,11 +29,25 @@ app.get("/", function(req, res){
     else{
         res.render("index.hbs",{
             rightoption1: "SIGN UP",
-            url1: "views/register.hbs",
+            url1: "registerpage",
             rightoption2: "LOG IN",
-            url2: "views/login.hbs"
+            url2: "loginpage"
         })
     }
+})
+
+app.get("/loginpage", function(req,res)
+{
+    res.render("login.hbs")
+})
+
+app.get("/submitsite", function(req,res){
+    res.render("submitsite.hbs")
+})
+
+app.get("/registerpage", function(req,res)
+{
+    res.render("register.hbs")
 })
 
 app.post("/register", urlencoder, function (req,res){

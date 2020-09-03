@@ -58,7 +58,7 @@ app.post("/register", urlencoder, function (req,res){
     let username = req.body.un
     let password = req.body.pw
     let verifiedpw = req.body.vpw
-    let email = req.body.email
+    let email = req.body.em
 
     
     if (username.trim()=="" || password.trim()=="" || email.trim()==""){

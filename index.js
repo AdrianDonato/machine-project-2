@@ -53,6 +53,18 @@ app.get("/registerpage", function(req,res)
 app.post("/register", urlencoder, function (req,res){
     let username = req.body.un
     let password = req.body.pw
+    let email = req.body.email
+
+    
+    if (username.trim()=="" || password.trim()=="" || email.trim()==""){
+        res.render("login.hbs",{
+            error:"Please input the empty field/s."
+        })
+    }else{
+        req.session.username = req.body.un
+        res.redirect("/")
+    }
+    
 })
 
 app.post("/login", urlencoder, function (req, res){

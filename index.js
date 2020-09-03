@@ -20,14 +20,18 @@ app.use(session({
 app.get("/", function(req, res){
     if (req.session.username){
         res.render("index.hbs",{
-            rightoption1: "SIGN UP",
-            rightoption2: "LOG IN"
+            rightoption1: "ACCOUNT",
+            url1: "views/userprofile.hbs",
+            rightoption2: "LOG OUT",
+            url2: "signout"
         })
     }
     else{
         res.render("index.hbs",{
-            rightoption1: "ACCOUNT",
-            rightoption2: "LOG OUT"
+            rightoption1: "SIGN UP",
+            url1: "views/register.hbs",
+            rightoption2: "LOG IN",
+            url2: "views/login.hbs"
         })
     }
 })

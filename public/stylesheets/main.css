@@ -2,7 +2,7 @@ html, body{
     font-family: sans-serif;
 }
 
-.topnav{
+#topnav{
     width: 100%;
     padding: 10px;
     grid-row: 1/2;
@@ -19,6 +19,9 @@ a, a:visited{
     color:white;
 }
 
+#categories{
+    overflow: hidden;
+}
 content
 {
     overflow: hidden;

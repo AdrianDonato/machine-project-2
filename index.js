@@ -17,6 +17,8 @@ app.use(session({
     }
 }))
 
+app.use(express.static('public'))
+
 app.get("/", function(req, res){
     if (req.session.username){
         res.render("index.hbs",{

@@ -2,7 +2,7 @@ html, body{
     font-family: sans-serif;
 }
 
-nav{
+#topnav{
     width: 100%;
     padding: 10px;
     grid-row: 1/2;

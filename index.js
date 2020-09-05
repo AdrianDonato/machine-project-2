@@ -48,7 +48,12 @@ app.get("/search", function(req,res){
 })
 
 app.get("/submitsite", function(req,res){
-    res.render("submitsite.hbs")
+    if (req.session.username){
+        res.render("submitsite.hbs")
+    }else{
+        res.render("login.hbs")
+    }
+    
 })
 
 app.get("/registerpage", function(req,res)

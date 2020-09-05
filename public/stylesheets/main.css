@@ -2,17 +2,17 @@ html, body{
     font-family: sans-serif;
 }
 
-nav{
+.topnav{
     width: 100%;
     padding: 10px;
     grid-row: 1/2;
     background-color: black;
     color: white;
-    position: fixed;
+  position: fixed;
     top: 0;
     left: 0;
     z-index:10;
-    overflow: hidden;
+   overflow: hidden;
 }
 
 a, a:visited{

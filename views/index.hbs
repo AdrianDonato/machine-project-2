@@ -4,11 +4,12 @@
         <link rel="stylesheet" href="/stylesheets/main.css">
     </head>
     <body>
+        <div class="container">
         <nav id = "topnav">
             <div class = "logo"></div>
-            <a>inSite</a>
+            <a style="float: left;">inSite</a>
             <input type = "text" name = "searchbar">
-            <select id = "categories">
+            <select id = "topCateg">
                 <option>All Categories</option>
                 <option>Social Media</option>
                 <option>E-Commerce</option>
@@ -18,11 +19,12 @@
                 <option>Entertainment</option> 
             </select>
             <button type = "submit">Submit</button>
-            <a href="submitsite">SUBMIT A WEBSITE</a>
+            <a href="submitsite" style="float: right;">SUBMIT A WEBSITE</a>
             <!-- rightoption1: either sign up or account, rightoption2: either log in or log out -->
             <a href={{url1}}>{{rightoption1}}</a>
             <a href={{url2}}>{{rightoption2}}</a>
         </nav>
+        
         <nav id = "categories">
             <span><a href="categories">Social Media</a></span>
             <span><a href="categories">E-Commerce</a></span>
@@ -31,9 +33,18 @@
             <span><a href="categories">Informational</a></span>
             <span><a href="categories">Entertainment</a></span>
         </nav>
+        </div>
+        
         <div class = "content">
         <div id="webOfTheDay">
             <h2>Website of the Day</h2>
+            
+        </div>
+        <div id="mostPop">
+            <h2>Most Popular Websites</h2>
+        </div>
+        <div id="highRate">
+            <h2>Highest Rated Websites</h2>
         </div>
         </div>
     </body>

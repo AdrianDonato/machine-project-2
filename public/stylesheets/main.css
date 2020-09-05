@@ -4,25 +4,67 @@ html, body{
 
 #topnav{
     width: 100%;
-    padding: 10px;
-    grid-row: 1/2;
-    background-color: black;
-    color: white;
+    padding: 20px;
+    background-color: white;
+    color: black;
     position: fixed;
     top: 0;
     left: 0;
     z-index:10;
     overflow: hidden;
+    text-align: center;
 }
 
-a, a:visited{
+#categories{
+    width: 100%;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 70;
+    left: 0;
+    z-index:10;
+    text-align: center;
+}
+
+.container{
+    height: 75px;
+}
+
+#topnav a, a:visited{
+    color:black;
+    margin: 5px;
+}
+
+#categories a, a:visited{
     color:white;
+    margin: 5px;
 }
-
 content
 {
     overflow: hidden;
 }
 
+div#webOfTheDay{
+    
+    height: 50%;
+    width: 100%;
+    text-align: center;
+}
 
+div#mostPop{
+    height: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+div#highRate{
+    height: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+select{
+    width: 20px;
+}
 

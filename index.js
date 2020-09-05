@@ -61,6 +61,11 @@ app.get("/registerpage", function(req,res)
     res.render("register.hbs")
 })
 
+app.get("/categories", function(req,res)
+{
+    res.render("categories.hbs")
+})
+        
 app.post("/register", urlencoder, function (req,res){
     let username = req.body.un
     let password = req.body.pw

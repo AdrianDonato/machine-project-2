@@ -48,6 +48,11 @@ a#left-name{
     border-radius: 4px;
 }
 
+#topnav a:hover{
+    color:white;
+    background-color: black;
+}
+
 #categories a, a:visited{
     color:white;
     margin: 5px;

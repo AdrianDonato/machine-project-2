@@ -31,7 +31,7 @@ app.get("/", function(req, res){
     else{
         res.render("index.hbs",{
             rightoption1: "SIGN UP",
-            url1: "registerpage",
+            url1: "register",
             rightoption2: "LOG IN",
             url2: "loginpage"
         })
@@ -48,7 +48,12 @@ app.get("/loginpage", function(req,res)
             url2: "signout"
         })
     }else{
-        res.render("login.hbs")
+        res.render("login.hbs",{
+            rightoption1: "SIGN UP",
+            url1: "register",
+            rightoption2: "LOG IN",
+            url2: "loginpage"
+        })
     }
 })
 
@@ -80,21 +85,31 @@ app.get("/submitsite", function(req,res){
             url2: "loginpage"
         })
     }else{
-        res.render("login.hbs")
+        res.render("login.hbs",{
+            rightoption1: "SIGN UP",
+            url1: "registerpage",
+            rightoption2: "LOG IN",
+            url2: "loginpage"
+        })
     }
     
 })
 
-app.get("/registerpage", function(req,res)
+app.get("/register", function(req,res)
 {
-    res.render("register.hbs")
+    res.render("register.hbs",{
+        rightoption1: "SIGN UP",
+        url1: "registerpage",
+        rightoption2: "LOG IN",
+        url2: "loginpage"
+    })
 })
 
-app.get("/categories", function(req,res)
+app.get("/", function(req,res)
 {
     if (req.session.username){
     res.render("categories.hbs",{
-        rightoption1: "ACCOUNT",
+        rightoption1: "",
         url1: "views/userprofile.hbs",
         rightoption2: "LOG OUT",
         url2: "signout"
@@ -124,11 +139,19 @@ app.post("/register", urlencoder, function (req,res){
     
     if (username.trim()=="" || password.trim()=="" || email.trim()==""){
         res.render("register.hbs",{
-            error:"Please input the empty field/s."
+            error:"Please input the empty field/s.",
+            rightoption1: "SIGN UP",
+            url1: "registerpage",
+            rightoption2: "LOG IN",
+            url2: "loginpage"
         })
     }else if(password != verifiedpw){
         res.render("register.hbs",{
-            error:"Password verification is incorrect."
+            error:"Password verification is incorrect.",
+            rightoption1: "SIGN UP",
+            url1: "registerpage",
+            rightoption2: "LOG IN",
+            url2: "loginpage"
         })
     }else{
         req.session.username = req.body.un
@@ -143,13 +166,148 @@ app.post("/login", urlencoder, function (req, res){
     
     if (username.trim()=="" || password.trim()==""){
         res.render("login.hbs",{
-            error:"Please input the empty field/s."
+            error:"Please input the empty field/s.",
+            rightoption1: "SIGN UP",
+            url1: "registerpage",
+            rightoption2: "LOG IN",
+            url2: "loginpage"
         })
     }else{
         req.session.username = req.body.un
         res.redirect("/")
     }
 })
+
+app.get("/social", function(req,res){
+    if (req.session.username){
+        res.render("categories.hbs",{
+            Category: "Social Media",
+            rightoption1: "",
+            url1: "views/userprofile.hbs",
+            rightoption2: "LOG OUT",
+            url2: "signout"
+        })
+    }
+    else{
+        res.render("categories.hbs",{
+            Category: "Social Media",
+            rightoption1: "SIGN UP",
+            url1: "registerpage",
+            rightoption2: "LOG IN",
+            url2: "loginpage"
+        })
+    }
+})
+
+app.get("/ecommerce", function(req,res){
+    if (req.session.username){
+        res.render("categories.hbs",{
+            Category: "E-Commerce",
+            rightoption1: "",
+            url1: "views/userprofile.hbs",
+            rightoption2: "LOG OUT",
+            url2: "signout"
+        })
+    }
+    else{
+        res.render("categories.hbs",{
+            Category: "E-Commerce",
+            rightoption1: "SIGN UP",
+            url1: "registerpage",
+            rightoption2: "LOG IN",
+            url2: "loginpage"
+        })
+    }
+})
+
+
+app.get("/news", function(req,res){
+    if (req.session.username){
+        res.render("categories.hbs",{
+            Category: "News Sites",
+            rightoption1: "",
+            url1: "views/userprofile.hbs",
+            rightoption2: "LOG OUT",
+            url2: "signout"
+        })
+    }
+    else{
+        res.render("categories.hbs",{
+            Category: "News Sites",
+            rightoption1: "SIGN UP",
+            url1: "registerpage",
+            rightoption2: "LOG IN",
+            url2: "loginpage"
+        })
+    }
+})
+
+
+app.get("/blogs", function(req,res){
+    if (req.session.username){
+        res.render("categories.hbs",{
+            Category: "Blogs",
+            rightoption1: "",
+            url1: "views/userprofile.hbs",
+            rightoption2: "LOG OUT",
+            url2: "signout"
+        })
+    }
+    else{
+        res.render("categories.hbs",{
+            Category: "Blogs",
+            rightoption1: "SIGN UP",
+            url1: "registerpage",
+            rightoption2: "LOG IN",
+            url2: "loginpage"
+        })
+    }
+})
+
+app.get("/info", function(req,res){
+    if (req.session.username){
+        res.render("categories.hbs",{
+            Category: "Informational",
+            rightoption1: "",
+            url1: "views/userprofile.hbs",
+            rightoption2: "LOG OUT",
+            url2: "signout"
+        })
+    }
+    else{
+        res.render("categories.hbs",{
+            Category: "Informational",
+            rightoption1: "SIGN UP",
+            url1: "registerpage",
+            rightoption2: "LOG IN",
+            url2: "loginpage"
+        })
+    }
+})
+
+
+app.get("/entertainment", function(req,res){
+    if (req.session.username){
+        res.render("categories.hbs",{
+            Category: "Entertainment",
+            rightoption1: "",
+            url1: "views/userprofile.hbs",
+            rightoption2: "LOG OUT",
+            url2: "signout"
+        })
+    }
+    else{
+        res.render("categories.hbs",{
+            Category: "Entertainment",
+            rightoption1: "SIGN UP",
+            url1: "registerpage",
+            rightoption2: "LOG IN",
+            url2: "loginpage"
+        })
+    }
+})
+
+
 
 app.get("/signout", function(req, res){
     req.session.destroy()

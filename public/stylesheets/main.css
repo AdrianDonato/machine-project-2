@@ -1,31 +1,131 @@
 html, body{
-    font-family: sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #topnav{
     width: 100%;
-    padding: 10px;
-    grid-row: 1/2;
-    background-color: black;
-    color: white;
-  position: fixed;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    position: fixed;
     top: 0;
     left: 0;
     z-index:10;
-   overflow: hidden;
+    overflow: hidden;
+    text-align: center;
 }
 
-a, a:visited{
-    color:white;
+a#left-name{
+    float: left;
+    font-weight: bold;
+    padding: 10px;
 }
 
 #categories{
-    overflow: hidden;
+    width: 100%;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 70;
+    left: 0;
+    z-index:10;
+    text-align: center;
+}
+
+.container{
+    height: 75px;
+}
+
+#topnav a, a:visited{
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+#categories a, a:visited{
+    color:white;
+    margin: 5px;
 }
 content
 {
     overflow: hidden;
 }
 
+div#webOfTheDay{
+    height: 75%;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
 
+div#siteDay{
+    height: 400px;
+    width: 75%;
+    background-color: lightgray;
+    margin: 20px auto;
+}
+
+div#mostPop{
+    height: 75%;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+div#sitePop{
+    height: 400px;
+    width: 75%;
+    background-color: lightgray;
+    margin: 20px auto;
+}
+
+div#highRate{
+    height: 75%;
+    width: 100%;
+    text-align: center;
+}
+
+div#siteHigh{
+    height: 400px;
+    width: 75%;
+    background-color: lightgray;
+    margin: 20px auto;
+}
+
+select{
+    width: 20px;
+}
+
+#searchbar{
+    width: 35%;
+    height: 35px;
+    border: 1px solid black;
+    background: lightgray;
+    color: black;
+}
+
+#searchbar:focus {
+    border: 3px solid black;
+    }
+
+button{
+    background: #092532;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    color:white;
+}
+
+button:hover{
+    background: black;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
 

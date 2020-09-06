@@ -19,25 +19,6 @@ app.use(session({
 
 app.use(express.static('public'))
 
-app.get("/", function(req, res){
-    if (req.session.username){
-        res.render("index.hbs",{
-            rightoption1: "ACCOUNT",
-            url1: "views/userprofile.hbs",
-            rightoption2: "LOG OUT",
-            url2: "signout"
-        })
-    }
-    else{
-        res.render("index.hbs",{
-            rightoption1: "SIGN UP",
-            url1: "register",
-            rightoption2: "LOG IN",
-            url2: "loginpage"
-        })
-    }
-})
-
 app.get("/loginpage", function(req,res)
 {
     if (req.session.username){
@@ -108,7 +89,7 @@ app.get("/register", function(req,res)
 app.get("/", function(req,res)
 {
     if (req.session.username){
-    res.render("categories.hbs",{
+    res.render("index.hbs",{
         rightoption1: "ACCOUNT",
         url1: "views/userprofile.hbs",
         rightoption2: "LOG OUT",
@@ -116,7 +97,7 @@ app.get("/", function(req,res)
     })
 }
 else{
-    res.render("categories.hbs",{
+    res.render("index.hbs",{
         rightoption1: "SIGN UP",
         url1: "register",
         rightoption2: "LOG IN",

@@ -3,10 +3,11 @@
         <link rel="stylesheet" href="/stylesheets/main.css">
     </head>
     <body>
-          <div class="container">
+          <body>
+        <div class="container">
         <nav id = "topnav">
             <div class = "logo"></div>
-            <a id="left-name">InSite</a>
+            <a href="/" id="left-name">InSite</a>
             <input type ="text" name ="searchbar" placeholder="Search" id="searchbar">
             <select id = "topCateg">
                 <option>All Categories</option>
@@ -18,10 +19,11 @@
                 <option>Entertainment</option> 
             </select>
             <button type = "submit">Submit</button>
-            <a href="submitsite" style="float: right;">SUBMIT A WEBSITE</a>
+            
             <!-- rightoption1: either sign up or account, rightoption2: either log in or log out -->
             <a href={{url1}} style="float: right;">{{rightoption1}}</a>
             <a href={{url2}} style="float: right;">{{rightoption2}}</a>
+            <a href="submitsite" style="float: right;">SUBMIT A WEBSITE</a>
         </nav>
         
         <nav id = "categories">
@@ -33,6 +35,7 @@
             <span><a href="categories">Entertainment</a></span>
         </nav>
         </div>
+
         <div class="content">
             <div class="loginbox">
                 LOGIN<br>

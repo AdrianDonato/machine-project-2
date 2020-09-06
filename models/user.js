@@ -5,7 +5,12 @@ let User = mongoose.model("user", {
     password: String,
     email: String,
     firstname: String,
-    lastname: String
+    lastname: String,
+    reviews: {
+        websitename: String,
+        rating: Number,
+        review: String
+    }
 })
 
 module.exports = {

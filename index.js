@@ -40,7 +40,16 @@ app.get("/", function(req, res){
 
 app.get("/loginpage", function(req,res)
 {
-    res.render("login.hbs")
+    if (req.session.username){
+        res.render("index.hbs",{
+            rightoption1: "ACCOUNT",
+            url1: "views/userprofile.hbs",
+            rightoption2: "LOG OUT",
+            url2: "signout"
+        })
+    }else{
+        res.render("login.hbs")
+    }
 })
 
 app.get("/search", function(req,res){

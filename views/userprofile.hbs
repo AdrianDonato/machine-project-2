@@ -2,11 +2,12 @@
     <head>
     </head>
     <body>
-        <div class = "navbar">
+         <div class="container">
+        <nav id = "topnav">
             <div class = "logo"></div>
-            <div>inSite</div>
-            <input type = "text" name = "searchbar">
-            <select id = "categories">
+            <a href="/" id="left-name">InSite</a>
+            <input type ="text" name ="searchbar" placeholder="Search" id="searchbar">
+            <select id = "topCateg">
                 <option>All Categories</option>
                 <option>Social Media</option>
                 <option>E-Commerce</option>
@@ -16,11 +17,12 @@
                 <option>Entertainment</option> 
             </select>
             <button type = "submit">Submit</button>
-            <a>SUBMIT A WEBSITE</a>
+            
             <!-- rightoption1: either sign up or account, rightoption2: either log in or log out -->
-            <a>USER PROFILE</a>
-            <a>LOG OUT</a>
-        </div>
+            <a href={{url1}} style="float: right;">{{rightoption1}}</a>
+            <a href={{url2}} style="float: right;">{{rightoption2}}</a>
+            <a href="submitsite" style="float: right;">SUBMIT A WEBSITE</a>
+        </nav>
         <div class = "content">
             <div class = "userprofile">
                 <h2>USER PROFILE</h2>

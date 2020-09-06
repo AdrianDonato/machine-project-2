@@ -4,10 +4,10 @@
     </head>
     
     <body>
-          <div class="container">
+        <div class="container">
         <nav id = "topnav">
             <div class = "logo"></div>
-            <a id="left-name">InSite</a>
+            <a href = "/" id="left-name">InSite</a>
             <input type ="text" name ="searchbar" placeholder="Search" id="searchbar">
             <select id = "topCateg">
                 <option>All Categories</option>
@@ -36,14 +36,17 @@
         </div>
 
         <div class = "content">
+            <div class = "sitebox">
             <form method="POST" action = "submitsite">
                 <label for = "site">Website Name</label>
-                <input type = "text" name = "site"><br>
+                <input type = "text" name = "site">
                 <label for = "link">Website URL</label>
-                <input type = "url" name = "link"><br>
-                <labe for = "desc">Description</labe>
+                <input type = "url" name = "link">
+                <label for = "desc">Description</label><br>
                 <textarea name = "desc"></textarea>
+                <input type="submit" value="Submit"  id="subBtn">   
             </form>
+        </div>
         </div>
     </body>
 </html>

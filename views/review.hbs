@@ -25,9 +25,11 @@
             <a href={{url2}} style="float: right;">{{rightoption2}}</a>
             <a href="submitsite" style="float: right;">SUBMIT A WEBSITE</a>
         </nav>
+        </div>
         <div class = "content">
+            <div class = "reviewbox">
             <form method = "POST" action = "review">
-                <h4>Ratings</h4>
+                <h2>Ratings</h2>
                 <label for = "design">Design</label>
                 <input type = "range" min = "0" max = "10" name = "design">
                 <label for = "usability">Usability</label>
@@ -38,10 +40,11 @@
                 <input type = "range" min = "0" max = "10"  name = "content">
                 <label for = "trust">Trustworthiness</label>
                 <input type = "range" min = "0" max = "10"  name = "trust">
-            </div>
-            <h4>Review</h4>
-            <textarea name = "review" ></textarea>
+                <h2>Review</h2>
+                <textarea name = "review" ></textarea>
+                 <input type="submit" value="Submit Review" id="subBtn">
             </form>
+            </div>
       </div>
     </body>
 </html>

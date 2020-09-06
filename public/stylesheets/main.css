@@ -218,3 +218,69 @@ button:hover{
     cursor: pointer;
 }
 
+.sitebox{
+    width: 50%;
+    margin: 0px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.sitebox input, textarea{
+    margin: 0px auto;
+    width: 50%;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    padding: 15px;
+    outline: none;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+  }
+  
+  .sitebox input:focus {
+    border: 2.5px solid black;
+  }
+  
+.reviewbox{
+    width: 50%;
+    margin: 0px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.reviewbox input {
+    margin: 0px auto;
+    width: 50%;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    padding: 15px;
+    outline: none;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+  }
+  
+.reviewbox textarea{
+    margin: 0px auto;
+    width: 70%;
+    height: 50%;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    padding: 15px;
+    outline: none;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+}
+  .reviewbox input:focus {
+    border: 2.5px solid black;
+  }

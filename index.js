@@ -24,7 +24,7 @@ app.get("/loginpage", function(req,res)
     if (req.session.username){
         res.render("index.hbs",{
             rightoption1: "ACCOUNT",
-            url1: "views/userprofile.hbs",
+            url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
         })
@@ -42,7 +42,7 @@ app.get("/search", function(req,res){
     if (req.session.username){
         res.render("search.hbs",{
             rightoption1: "ACCOUNT",
-            url1: "views/userprofile.hbs",
+            url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
         })
@@ -61,7 +61,7 @@ app.get("/submitsite", function(req,res){
     if (req.session.username){
         res.render("submitsite.hbs",{
             rightoption1: "ACCOUNT",
-            url1: "views/userprofile.hbs",
+            url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "loginpage"
         })
@@ -91,7 +91,7 @@ app.get("/", function(req,res)
     if (req.session.username){
     res.render("index.hbs",{
         rightoption1: "ACCOUNT",
-        url1: "views/userprofile.hbs",
+        url1: "userprofile",
         rightoption2: "LOG OUT",
         url2: "signout"
     })
@@ -111,7 +111,7 @@ app.get("/websitepage", function(req,res)
     if (req.session.username){
         res.render("websitepage.hbs",{
             rightoption1: "ACCOUNT",
-            url1: "views/userprofile.hbs",
+            url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
         })
@@ -125,12 +125,20 @@ app.get("/websitepage", function(req,res)
         })
     }
 })
+app.get("/userprofile", function(req,res){
+    res.render("userprofile.hbs", {
+        rightoption1: "ACCOUNT",
+        url1: "userprofile",
+        rightoption2: "LOG OUT",
+        url2: "signout"
+    })
+})
 
 app.get("/review", function(req,res){
     if (req.session.username){
         res.render("review.hbs",{
             rightoption1: "ACCOUNT",
-            url1: "views/userprofile.hbs",
+            url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
         })
@@ -198,7 +206,7 @@ app.get("/social", function(req,res){
         res.render("categories.hbs",{
             Category: "Social Media",
             rightoption1: "",
-            url1: "views/userprofile.hbs",
+            url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
         })
@@ -219,7 +227,7 @@ app.get("/ecommerce", function(req,res){
         res.render("categories.hbs",{
             Category: "E-Commerce",
             rightoption1: "",
-            url1: "views/userprofile.hbs",
+            url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
         })
@@ -241,7 +249,7 @@ app.get("/news", function(req,res){
         res.render("categories.hbs",{
             Category: "News Sites",
             rightoption1: "",
-            url1: "views/userprofile.hbs",
+            url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
         })
@@ -263,7 +271,7 @@ app.get("/blogs", function(req,res){
         res.render("categories.hbs",{
             Category: "Blogs",
             rightoption1: "ACCPUNT",
-            url1: "views/userprofile.hbs",
+            url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
         })
@@ -284,7 +292,7 @@ app.get("/info", function(req,res){
         res.render("categories.hbs",{
             Category: "Informational",
             rightoption1: "",
-            url1: "views/userprofile.hbs",
+            url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
         })
@@ -306,7 +314,7 @@ app.get("/entertainment", function(req,res){
         res.render("categories.hbs",{
             Category: "Entertainment",
             rightoption1: "",
-            url1: "views/userprofile.hbs",
+            url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
         })

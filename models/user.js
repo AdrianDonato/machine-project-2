@@ -8,7 +8,11 @@ let User = mongoose.model("user", {
     lastname: String,
     reviews: {
         websitename: String,
-        rating: Number,
+        designscore: Number,
+        usabilityscore: Number,
+        contentscore: Number,
+        creativityscore: Number,
+        trustscore: Number,
         review: String
     }
 })

@@ -40,16 +40,45 @@ app.get("/", function(req, res){
 
 app.get("/loginpage", function(req,res)
 {
-    res.render("login.hbs")
+    if (req.session.username){
+        res.render("index.hbs",{
+            rightoption1: "ACCOUNT",
+            url1: "views/userprofile.hbs",
+            rightoption2: "LOG OUT",
+            url2: "signout"
+        })
+    }else{
+        res.render("login.hbs")
+    }
 })
 
 app.get("/search", function(req,res){
-    res.render("search.hbs")
+    if (req.session.username){
+        res.render("search.hbs",{
+            rightoption1: "ACCOUNT",
+            url1: "views/userprofile.hbs",
+            rightoption2: "LOG OUT",
+            url2: "signout"
+        })
+    }
+    else{
+        res.render("search.hbs",{
+            rightoption1: "SIGN UP",
+            url1: "registerpage",
+            rightoption2: "LOG IN",
+            url2: "loginpage"
+        })
+    }
 })
 
 app.get("/submitsite", function(req,res){
     if (req.session.username){
-        res.render("submitsite.hbs")
+        res.render("submitsite.hbs",{
+            rightoption1: "ACCOUNT",
+            url1: "registerpage",
+            rightoption2: "LOG OUT",
+            url2: "loginpage"
+        })
     }else{
         res.render("login.hbs")
     }
@@ -63,7 +92,22 @@ app.get("/registerpage", function(req,res)
 
 app.get("/categories", function(req,res)
 {
-    res.render("categories.hbs")
+    if (req.session.username){
+    res.render("categories.hbs",{
+        rightoption1: "ACCOUNT",
+        url1: "views/userprofile.hbs",
+        rightoption2: "LOG OUT",
+        url2: "signout"
+    })
+}
+else{
+    res.render("categories.hbs",{
+        rightoption1: "SIGN UP",
+        url1: "registerpage",
+        rightoption2: "LOG IN",
+        url2: "loginpage"
+    })
+}
 })
 
 app.get("/websitepage", function(req,res)

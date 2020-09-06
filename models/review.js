@@ -10,3 +10,7 @@ let Review  = mongoose.model("review", {
    trustscore: Number,
    review: String
 })
+
+module.exports = {
+   Review
+}

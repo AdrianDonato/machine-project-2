@@ -153,6 +153,14 @@ app.get("/userprofile", function(req,res){
             url2: "signout"
         })
 })
+app.get("/viewreviews", function(req,res){
+    res.render("listreviews.hbs",{
+        rightoption1: "ACCOUNT",
+        url1: "userprofile",
+        rightoption2: "LOG OUT",
+        url2: "signout"
+    })
+})
         
 app.post("/register", urlencoder, function (req,res){
     let username = req.body.un

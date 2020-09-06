@@ -152,6 +152,15 @@ app.get("/review", function(req,res){
         })
     }
 })
+
+app.get("/userprofile", function(req,res){
+    res.render("userprofile.hbs",{
+            rightoption1: "ACCOUNT",
+            url1: "userprofile",
+            rightoption2: "LOG OUT",
+            url2: "signout"
+        })
+})
         
 app.post("/register", urlencoder, function (req,res){
     let username = req.body.un

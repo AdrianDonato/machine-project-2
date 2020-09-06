@@ -147,8 +147,8 @@ app.get("/review", function(req,res){
 
 app.get("/userprofile", function(req,res){
     res.render("userprofile.hbs",{
-            rightoption1: "ACCOUNT",
-            url1: "userprofile",
+            rightoption1: "EDIT PROFILE",
+            url1: "editprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
         })
@@ -202,11 +202,19 @@ app.post("/login", urlencoder, function (req, res){
     }
 })
 
+app.get("/editprofile",function(req,res){
+    res.render("editprofile.hbs", {
+        rightoption1: "ACCOUNT",
+        url1: "userprofile",
+        rightoption2: "LOG OUT",
+        url2: "signout"
+    })
+})
 app.get("/social", function(req,res){
     if (req.session.username){
         res.render("categories.hbs",{
             Category: "Social Media",
-            rightoption1: "",
+            rightoption1: "ACCOUNT",
             url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"

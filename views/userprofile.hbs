@@ -5,6 +5,7 @@
     
     <body>
          <div class="container">
+         <div class="container">
         <nav id = "topnav">
             <div class = "logo"></div>
             <a href="/" id="left-name">InSite</a>
@@ -25,15 +26,26 @@
             <a href={{url2}} style="float: right;">{{rightoption2}}</a>
             <a href="submitsite" style="float: right;">SUBMIT A WEBSITE</a>
         </nav>
-         </div>
+        
+         <nav id = "categories">
+            <span><a href="social">Social Media</a></span>
+            <span><a href="ecommerce">E-Commerce</a></span>
+            <span><a href="news">News Sites</a></span>
+            <span><a href="blogs">Blogs</a></span>
+            <span><a href="info">Informational</a></span>
+            <span><a href="entertainment">Entertainment</a></span>
+        </nav>
+        </div>
+        
         <div class = "content">
             <div class = "userprofile">
                 <h2>USER PROFILE</h2>
-                Username: {{username}}
-                Email: {{email}}
-                Full Name: {{fullname}}
-                Occuptation: {{occupation}}
+                Username: {{username}}<br>
+                Email: {{email}}<br>
+                Full Name: {{fullname}}<br>
+                Occuptation: {{occupation}}<br>
             </div>
+            <a href = "editprofile">Edit Profile</a>
         </div>
     </body>
 </html>

@@ -57,11 +57,6 @@ a#left-name{
     color:white;
     margin: 5px;
 }
-content
-{
-    overflow: hidden;
-}
-
 a.aPhold, a.aPhold:visited{
     color: black;
     text-decoration: none;

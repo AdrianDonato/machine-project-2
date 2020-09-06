@@ -247,7 +247,7 @@ app.get("/blogs", function(req,res){
     if (req.session.username){
         res.render("categories.hbs",{
             Category: "Blogs",
-            rightoption1: "",
+            rightoption1: "ACCPUNT",
             url1: "views/userprofile.hbs",
             rightoption2: "LOG OUT",
             url2: "signout"

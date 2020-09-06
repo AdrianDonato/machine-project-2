@@ -3,8 +3,7 @@
         <link rel="stylesheet" href="/stylesheets/main.css">
     </head>
     <body>
-          <body>
-        <div class="container">
+          <div class="container">
         <nav id = "topnav">
             <div class = "logo"></div>
             <a href="/" id="left-name">InSite</a>
@@ -38,14 +37,16 @@
 
         <div class="content">
             <div class="loginbox">
-                LOGIN<br>
+                <h1>LOGIN</h1>
                 {{#if error}}
                     {{error}}
                 {{/if}}
                 <form method="post" action="login">
-                    Username <input type="text" name="un"><br>
-                    Password <input type="password" name="pw"><br>
-                    <input type="submit" value="login">
+                    <label for = "un">Username</label>
+                    <input type = "text" placeholder="Enter Username" name ="un">
+                    <label for = "pw">Password</label>
+                    <input type = "password" placeholder="Enter Password" name ="pw">
+                    <input type="submit" value="login" id="subBtn">
                 </form>
             </div>
         </div>  

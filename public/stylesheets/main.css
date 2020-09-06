@@ -4,7 +4,7 @@ html, body{
 
 #topnav{
     width: 100%;
-    padding: 20px;
+    padding: 5px;
     background-color: white;
     color: black;
     position: fixed;
@@ -13,6 +13,7 @@ html, body{
     z-index:10;
     overflow: hidden;
     text-align: center;
+    margin: 5px;
 }
 
 a#left-name{

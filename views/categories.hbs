@@ -3,11 +3,12 @@
         <link rel="stylesheet" href="/stylesheets/main.css">
     </head>
     <body>
-        <nav>
+         <div class="container">
+        <nav id = "topnav">
             <div class = "logo"></div>
-            <a>inSite</a>
-            <input type = "text" name = "searchbar">
-            <select id = "categories">
+            <a id="left-name">InSite</a>
+            <input type ="text" name ="searchbar" placeholder="Search" id="searchbar">
+            <select id = "topCateg">
                 <option>All Categories</option>
                 <option>Social Media</option>
                 <option>E-Commerce</option>
@@ -17,11 +18,22 @@
                 <option>Entertainment</option> 
             </select>
             <button type = "submit">Submit</button>
-            <a>SUBMIT A WEBSITE</a>
+            <a href="submitsite" style="float: right;">SUBMIT A WEBSITE</a>
             <!-- rightoption1: either sign up or account, rightoption2: either log in or log out -->
-            <a>SIGN UP</a>
-            <a>LOG IN</a>
+            <a href={{url1}} style="float: right;">{{rightoption1}}</a>
+            <a href={{url2}} style="float: right;">{{rightoption2}}</a>
         </nav>
+        
+        <nav id = "categories">
+            <span><a href="categories">Social Media</a></span>
+            <span><a href="categories">E-Commerce</a></span>
+            <span><a href="categories">News Sites</a></span>
+            <span><a href="categories">Blogs</a></span>
+            <span><a href="categories">Informational</a></span>
+            <span><a href="categories">Entertainment</a></span>
+        </nav>
+        </div>
+
         <div class = "content">
             <div class = "container">
                 <h2>{{Category}}</h2>

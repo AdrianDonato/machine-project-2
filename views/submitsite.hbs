@@ -3,25 +3,35 @@
     </head>
     
     <body>
-         <div class = "navbar">
+          <div class="container">
+        <nav id = "topnav">
             <div class = "logo"></div>
-            <span id = "siteName">inSite</span>
-            <div class = "search">
-                <input type = "text" placeholder = "Search Websites..." name = "searchbar">
-                <select id = "categories">
-                    <option value = "all">All Categories</option>
-                    <option value = "social">Social Media</option>
-                    <option value = "ecommerce">E-Commerce</option>
-                    <option value = "news">News Sites</option>
-                    <option value = "blogs">Blogs</option>
-                    <option value = "info">Informational</option> 
-                    <option value = "entertainment">Enter</option>
-                </select>
-                <button type = "submit">Submit</button>
-            </div>
-            <a href = "">SUBMIT A WEBSITE</a>
-            <a href = "">SIGN UP</a>
-            <a href = "">LOG IN</a>
+            <a id="left-name">InSite</a>
+            <input type ="text" name ="searchbar" placeholder="Search" id="searchbar">
+            <select id = "topCateg">
+                <option>All Categories</option>
+                <option>Social Media</option>
+                <option>E-Commerce</option>
+                <option>News Sites</option>
+                <option>Blogs</option>
+                <option>Informational</option> 
+                <option>Entertainment</option> 
+            </select>
+            <button type = "submit">Submit</button>
+            <a href="submitsite" style="float: right;">SUBMIT A WEBSITE</a>
+            <!-- rightoption1: either sign up or account, rightoption2: either log in or log out -->
+            <a href={{url1}} style="float: right;">{{rightoption1}}</a>
+            <a href={{url2}} style="float: right;">{{rightoption2}}</a>
+        </nav>
+        
+        <nav id = "categories">
+            <span><a href="categories">Social Media</a></span>
+            <span><a href="categories">E-Commerce</a></span>
+            <span><a href="categories">News Sites</a></span>
+            <span><a href="categories">Blogs</a></span>
+            <span><a href="categories">Informational</a></span>
+            <span><a href="categories">Entertainment</a></span>
+        </nav>
         </div>
 
         <div class = "content">

@@ -2,10 +2,15 @@ const express = require("express")
 const session = require("express-session")
 const bodyparser = require("body-parser")
 const cookieparser = require("cookie-parser")
-
+const mongoose = requre("mongoose")
 const app = express()
 const urlencoder = bodyparser.urlencoded({
     extended:false
+})
+
+mongoose.connect("mongodb://127.0.0.1:27017/apdev-mp2-3-db",{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 })
 
 app.use(session({

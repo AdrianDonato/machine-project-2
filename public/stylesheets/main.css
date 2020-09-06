@@ -244,6 +244,10 @@ button:hover{
     border: 2.5px solid black;
   }
   
+  .sitebox a, a:visited{
+      color: black;
+      text-decoration: none;
+  }
 .reviewbox{
     width: 50%;
     margin: 0px auto;
@@ -284,3 +288,5 @@ button:hover{
   .reviewbox input:focus {
     border: 2.5px solid black;
   }
+
+  

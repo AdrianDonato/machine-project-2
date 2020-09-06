@@ -65,6 +65,11 @@ app.get("/categories", function(req,res)
 {
     res.render("categories.hbs")
 })
+
+app.get("/websitepage", function(req,res)
+{
+    res.render("websitepage.hbs")
+})
         
 app.post("/register", urlencoder, function (req,res){
     let username = req.body.un

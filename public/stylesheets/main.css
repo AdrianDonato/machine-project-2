@@ -62,6 +62,20 @@ content
     overflow: hidden;
 }
 
+a.aPhold, a.aPhold:visited{
+    color: black;
+    text-decoration: none;
+    width: 20px;
+}
+
+a.aPhold:hover{
+    width: 20px;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 8px;
+}
+
 div#webOfTheDay{
     height: 75%;
     width: 100%;
@@ -74,6 +88,7 @@ div#siteDay{
     width: 75%;
     background-color: lightgray;
     margin: 20px auto;
+    border-radius: 10px;
 }
 
 div#mostPop{
@@ -88,6 +103,7 @@ div#sitePop{
     width: 75%;
     background-color: lightgray;
     margin: 20px auto;
+    border-radius: 10px;
 }
 
 div#highRate{
@@ -101,6 +117,7 @@ div#siteHigh{
     width: 75%;
     background-color: lightgray;
     margin: 20px auto;
+    border-radius: 10px;
 }
 
 select{

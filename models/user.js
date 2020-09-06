@@ -12,7 +12,7 @@ let User = mongoose.model("user", {
         usabilityscore: Number,
         contentscore: Number,
         creativityscore: Number,
-        trustscore: Number
+        trustscore: Number,
         review: String
     }
 })

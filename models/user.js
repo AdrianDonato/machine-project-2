@@ -9,6 +9,7 @@ let User = mongoose.model("user", {
     lastname: String,
     reviews: [
         {
+            date: Date,
             websitename: String,
             designscore: Number,
             usabilityscore: Number,

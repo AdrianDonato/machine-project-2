@@ -2,9 +2,9 @@
 
     <head>
     </head>
-
+  <link rel="stylesheet" href="/stylesheets/main.css">
     <body>
-         <div class="container">
+          <div class="container">
         <nav id = "topnav">
             <div class = "logo"></div>
             <a href="/" id="left-name">InSite</a>
@@ -18,21 +18,34 @@
                 <option>Informational</option> 
                 <option>Entertainment</option> 
             </select>
-            <button type = "submit">Submit</button>
-            
+          <button type = "submit" id = "searchBtn" onclick = "window.location.href = 'search' ">Search</button>
             <!-- rightoption1: either sign up or account, rightoption2: either log in or log out -->
             <a href={{url1}} style="float: right;">{{rightoption1}}</a>
             <a href={{url2}} style="float: right;">{{rightoption2}}</a>
             <a href="submitsite" style="float: right;">SUBMIT A WEBSITE</a>
+           
         </nav>
-        <div class = "categories">
-            <span>Social Media</span>
-            <span>E-Commerce</span>
-            <span>News Sites</span>
-            <span>Blogs</span>
-            <span>Informational</span>
-            <span>Entertainment</span>
+        
+         <nav id = "categories">
+            <span><a href="social">Social Media</a></span>
+            <span><a href="ecommerce">E-Commerce</a></span>
+            <span><a href="news">News Sites</a></span>
+            <span><a href="blogs">Blogs</a></span>
+            <span><a href="info">Informational</a></span>
+            <span><a href="entertainment">Entertainment</a></span>
+        </nav>
         </div>
-        <div class = "content"></div>
+        
+        <div class = "content">
+             <h2 style = "text-align: center;">Search Results</h2>
+            <div id = "sitePop">
+            </div>
+            <div id = "sitePop">
+            </div>
+            <div id = "sitePop">
+            </div>
+            <div id = "sitePop">
+            </div>
+        </div>
     </body>
 </html>

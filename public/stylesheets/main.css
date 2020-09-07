@@ -51,6 +51,7 @@ a#left-name{
 #topnav a:hover{
     color:white;
     background-color: black;
+
 }
 
 #categories a, a:visited{
@@ -113,8 +114,7 @@ div#siteHigh{
     background-color: lightgray;
     margin: 20px auto;
     border-radius: 10px;
-}
-
+}   
 select{
     width: 20px;
 }
@@ -137,6 +137,8 @@ button{
     border-radius: 5px;
     padding: 5px;
     color:white;
+    width: min-content;
+    height: min-content;
 }
 
 button:hover{
@@ -144,8 +146,29 @@ button:hover{
     color: white;
     border: 1px solid black;
     cursor: pointer;
+    width: min-content;
+    height: min-content;
 }
 
+.button{
+    background: #092532;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    color:white;
+    width: min-content;
+    height: min-content;
+}
+
+.button:hover{
+    background: black;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    width: min-content;
+    height: min-content;
+}
+s
 .registerbox{
     width: 50%;
     margin: 0px auto;

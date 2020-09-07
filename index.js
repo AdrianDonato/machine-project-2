@@ -2,7 +2,7 @@ const express = require("express")
 const session = require("express-session")
 const bodyparser = require("body-parser")
 const cookieparser = require("cookie-parser")
-const mongoose = requre("mongoose")
+const mongoose = require("mongoose")
 const app = express()
 const urlencoder = bodyparser.urlencoded({
     extended:false
@@ -103,6 +103,27 @@ app.get("/", function(req,res)
 }
 else{
     res.render("index.hbs",{
+        rightoption1: "SIGN UP",
+        url1: "register",
+        rightoption2: "LOG IN",
+        url2: "loginpage"
+    })
+}
+})
+
+
+app.get("/moderator", function(req,res)
+{
+    if (req.session.username){
+    res.render("moderator.hbs",{
+        rightoption1: "ACCOUNT",
+        url1: "userprofile",
+        rightoption2: "LOG OUT",
+        url2: "signout"
+    })
+}
+else{
+    res.render("login.hbs",{
         rightoption1: "SIGN UP",
         url1: "register",
         rightoption2: "LOG IN",

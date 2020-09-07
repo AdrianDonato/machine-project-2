@@ -6,7 +6,7 @@ let User = mongoose.model("user", {
     email: String,
     firstname: String,
     lastname: String,
-    reviews: {
+    reviews: [{
         websitename: String,
         designscore: Number,
         usabilityscore: Number,
@@ -14,7 +14,7 @@ let User = mongoose.model("user", {
         creativityscore: Number,
         trustscore: Number,
         review: String
-    }
+    }]
 })
 
 module.exports = {

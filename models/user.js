@@ -6,15 +6,17 @@ let User = mongoose.model("user", {
     email: String,
     firstname: String,
     lastname: String,
-    reviews: [{
-        websitename: String,
-        designscore: Number,
-        usabilityscore: Number,
-        contentscore: Number,
-        creativityscore: Number,
-        trustscore: Number,
-        review: String
-    }]
+    reviews: [
+        {
+            websitename: String,
+            designscore: Number,
+            usabilityscore: Number,
+            contentscore: Number,
+            creativityscore: Number,
+            trustscore: Number,
+            review: String
+        }
+    ]
 })
 
 module.exports = {

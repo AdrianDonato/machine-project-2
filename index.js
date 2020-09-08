@@ -171,6 +171,23 @@ app.get("/review", function(req,res){
     }
 })
 
+app.post("/review", function(req,res){
+    res.render("index.hbs",{
+        rightoption1: "ACCOUNT",
+        url1: "userprofile",
+        rightoption2: "LOG OUT",
+        url2: "signout"
+    })
+})
+app.post("/submitsite", function(req,res){
+    res.render("index.hbs",{
+        rightoption1: "ACCOUNT",
+        url1: "userprofile",
+        rightoption2: "LOG OUT",
+        url2: "signout"
+    })
+})
+
 app.get("/userprofile", function(req,res){
     res.render("userprofile.hbs",{
             rightoption1: "EDIT PROFILE",
@@ -269,7 +286,7 @@ app.get("/ecommerce", function(req,res){
     if (req.session.username){
         res.render("categories.hbs",{
             Category: "E-Commerce",
-            rightoption1: "",
+            rightoption1: "ACCOUNT",
             url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
@@ -291,7 +308,7 @@ app.get("/news", function(req,res){
     if (req.session.username){
         res.render("categories.hbs",{
             Category: "News Sites",
-            rightoption1: "",
+            rightoption1: "ACCOUNT",
             url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
@@ -313,7 +330,7 @@ app.get("/blogs", function(req,res){
     if (req.session.username){
         res.render("categories.hbs",{
             Category: "Blogs",
-            rightoption1: "ACCPUNT",
+            rightoption1: "ACCOUNT",
             url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
@@ -334,7 +351,7 @@ app.get("/info", function(req,res){
     if (req.session.username){
         res.render("categories.hbs",{
             Category: "Informational",
-            rightoption1: "",
+            rightoption1: "ACCOUNT",
             url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"
@@ -356,7 +373,7 @@ app.get("/entertainment", function(req,res){
     if (req.session.username){
         res.render("categories.hbs",{
             Category: "Entertainment",
-            rightoption1: "",
+            rightoption1: "ACCOUNT",
             url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout"

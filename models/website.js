@@ -8,11 +8,7 @@ let Website = mongoose.model("website", {
     avg_contentscore: Number,
     avg_creativityscore: Number,
     avg_trustscore: Number,
-    tags: [
-        {
-            tag: String
-        }
-    ]
+    tags: [String]
 })
 
 model.exports = {

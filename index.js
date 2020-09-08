@@ -139,7 +139,11 @@ app.get("/websitepage", function(req,res)
             rightoption1: "ACCOUNT",
             url1: "userprofile",
             rightoption2: "LOG OUT",
-            url2: "signout"
+            url2: "signout",
+            websitename : "Sample Website",
+            websitecategory : "Informational",
+            websitelink : "sample url",
+            rating : "4.7"
         })
     }
     else{
@@ -147,7 +151,11 @@ app.get("/websitepage", function(req,res)
             rightoption1: "SIGN UP",
             url1: "register",
             rightoption2: "LOG IN",
-            url2: "loginpage"
+            url2: "loginpage",
+            websitename : "Sample Website",
+            websitecategory : "Informational",
+            websitelink : "sample url",
+            rating : "4.7"
         })
     }
 })
@@ -171,21 +179,29 @@ app.get("/review", function(req,res){
     }
 })
 
-app.post("/review", function(req,res){
-    res.render("index.hbs",{
+app.get("/reviewdetails", function(req,res){
+    res.render("reviewinfo.hbs",{
         rightoption1: "ACCOUNT",
         url1: "userprofile",
         rightoption2: "LOG OUT",
-        url2: "signout"
+        url2: "signout",
+        websitename : "Sample Website",
+            websitecategory : "Informational",
+            websitelink : "sample url",
+            rating : "4.7",
+        design : "4.5",
+        usability : "5",
+        creativity : "4.5",
+        content : "4.5",
+        trust : "5",
+        review : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     })
 })
+app.post("/review", function(req,res){
+   res.redirect("/")
+})
 app.post("/submitsite", function(req,res){
-    res.render("index.hbs",{
-        rightoption1: "ACCOUNT",
-        url1: "userprofile",
-        rightoption2: "LOG OUT",
-        url2: "signout"
-    })
+    res.redirect("/")
 })
 
 app.get("/userprofile", function(req,res){
@@ -260,6 +276,10 @@ app.get("/editprofile",function(req,res){
         rightoption2: "LOG OUT",
         url2: "signout"
     })
+})
+
+app.post("/updateprofile",function (req,res){
+    res.redirect("/")
 })
 app.get("/social", function(req,res){
     if (req.session.username){

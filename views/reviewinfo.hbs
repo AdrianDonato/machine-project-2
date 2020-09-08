@@ -2,11 +2,12 @@
     <head>
         <link rel="stylesheet" href="/stylesheets/main.css">
     </head>
+    
     <body>
-         <div class="container">
+      <div class="container">
         <nav id = "topnav">
             <div class = "logo"></div>
-            <a  href = "/" id="left-name">InSite</a>
+            <a href="/" id="left-name">InSite</a>
             <input type ="text" name ="searchbar" placeholder="Search" id="searchbar">
             <select id = "topCateg">
                 <option>All Categories</option>
@@ -17,15 +18,14 @@
                 <option>Informational</option> 
                 <option>Entertainment</option> 
             </select>
-  <button type = "submit" id = "searchBtn" onclick = "window.location.href = 'search' ">Search</button>
+            <button type = "submit" id = "searchBtn" onclick = "window.location.href = 'search' ">Search</button>
             <!-- rightoption1: either sign up or account, rightoption2: either log in or log out -->
             <a href={{url1}} style="float: right;">{{rightoption1}}</a>
             <a href={{url2}} style="float: right;">{{rightoption2}}</a>
-             <a href="submitsite" style="float: right;">SUBMIT A WEBSITE</a>
-           
+            <a href="submitsite" style="float: right;">SUBMIT A WEBSITE</a>
         </nav>
         
-        <nav id = "categories">
+         <nav id = "categories">
             <span><a href="social">Social Media</a></span>
             <span><a href="ecommerce">E-Commerce</a></span>
             <span><a href="news">News Sites</a></span>
@@ -34,14 +34,23 @@
             <span><a href="entertainment">Entertainment</a></span>
         </nav>
         </div>
-
-        <div class = "content">
-            <div class = "container">
-                <h2 style="text-align: center;">{{Category}}</h2>
-            <div id="categSites">
+        <div class="content">
+            <div class = "sitebox">
+            <div id="sitePop">
             </div>
-            </div>
+            <h2>{{websitename}}</h2><br>
+            {{websitecategory}}<br>
+            <a class = "aPhold" href = "">{{websitelink}}</a><br>
+            <p>{{websitedesc}}</p>
+            <div>
+                <p>Design : {{design}}</p>
+                <p>Usability: {{usability}}</p>
+                <p>Creativity : {{creativity}}</p>
+                <p>Content : {{content}}</p>
+                <p>Trusthworthiness : {{trust}}</p>
+            </div><br>
+            <p>{{review}}</p>
+            </div>  
         </div>
-
     </body>
 </html>

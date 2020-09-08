@@ -2,7 +2,7 @@ const express = require("express")
 const session = require("express-session")
 const bodyparser = require("body-parser")
 const cookieparser = require("cookie-parser")
-const mongoose = requre("mongoose")
+const mongoose = require("mongoose")
 const app = express()
 const urlencoder = bodyparser.urlencoded({
     extended:false

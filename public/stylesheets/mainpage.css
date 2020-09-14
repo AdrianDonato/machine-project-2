@@ -1,0 +1,25 @@
+.fit-image{
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+}
+
+#wod-header{
+    top: 0;
+    bottom: auto;
+}
+
+.list-image{
+    object-fit:scale-down;
+    width: 80%;
+    height: 250px;
+}
+
+.long-textbar{
+    width: 500px;
+}
+
+.no-margin-padding{
+    margin:0;
+    padding:0;
+}

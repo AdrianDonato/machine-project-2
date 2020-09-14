@@ -1,61 +1,189 @@
 <html>
 
     <head>
-        <link rel="stylesheet" href="/stylesheets/main.css">
+        <!-- <link rel="stylesheet" href="/stylesheets/main.css"> -->
+        
+        <script src="jquery.js"></script>
+        <link rel="stylesheet" href="/stylesheets/mainpage.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
     </head>
     <body>
-        <div class="container">
-        <nav id = "topnav">
-            <div class = "logo"></div>
-            <a href="/" id="left-name">InSite</a>
-            <input type ="text" name ="searchbar" placeholder="Search" id="searchbar">
-         
-            <select id = "topCateg">
-                <option>All Categories</option>
-                <option>Social Media</option>
-                <option>E-Commerce</option>
-                <option>News Sites</option>
-                <option>Blogs</option>
-                <option>Informational</option> 
-                <option>Entertainment</option> 
-            </select>
-          <button type = "submit" id = "searchBtn" onclick = "window.location.href = 'search' ">Search</button>
-            
-            <!-- rightoption1: either sign up or account, rightoption2: either log in or log out -->
-            <a href={{url1}} style="float: right;">{{rightoption1}}</a>
-            <a href={{url2}} style="float: right;">{{rightoption2}}</a>
-            <a href="submitsite" style="float: right;">SUBMIT A WEBSITE</a>
+        <nav class = "navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+            <div class = "container-fluid">
+                <a class="navbar-brand" href="/"><img src = "/images/navbar-logo-micro.png"></a>
+                
+                <form class = "form-inline d-flex my-2 my-lg-0 justify-content-center md-form long-textbar" method="get" action="search">
+                    <div class="lg-form my-0">
+                        <input class="form-control form-control-md ml-3 long-textbar" type="text" placeholder ="search for websites..." aria-label="search">
+                        <button href = "search" class="btn btn-outline-light btn-md my-0 ml-sm-2">SEARCH</button>
+                    </div>
+                </form>
+                <!--
+                <div class = "col-xl-2">
+                        <select id = "topCateg">
+                        <option>All Categories</option>
+                        <option>Social Media</option>
+                        <option>E-Commerce</option>
+                        <option>News Sites</option>
+                        <option>Blogs</option>
+                        <option>Informational</option> 
+                        <option>Entertainment</option> 
+                        </select>
+                </div> -->
+                
+                
+                <ul class="navbar-nav">
+                    <li class = "nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false">
+                            VIEW WEBSITES
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="social">Social Media</a>
+                            <a class="dropdown-item" href="ecommerce">E-Commerce</a>
+                            <a class="dropdown-item" href="news">News Sites</a>
+                            <a class="dropdown-item" href="blogs">Blogs/Focus Sites</a>
+                            <a class="dropdown-item" href="info">Informational</a>
+                            <a class="dropdown-item" href="entertainment">Entertainment</a>
+                        </div>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href="submitsite">SUBMIT A WEBSITE</a>
+                    </li>
+                    <!-- rightoption1: either sign up or account, rightoption2: either log in or log out -->
+                    <li class = "nav-item">
+                        <a class = "nav-link" href="{{url1}}">{{rightoption1}}</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href="{{url2}}">{{rightoption2}}</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         
-         <nav id = "categories">
-            <span><a href="social">Social Media</a></span>
-            <span><a href="ecommerce">E-Commerce</a></span>
-            <span><a href="news">News Sites</a></span>
-            <span><a href="blogs">Blogs</a></span>
-            <span><a href="info">Informational</a></span>
-            <span><a href="entertainment">Entertainment</a></span>
-        </nav>
+        <!--- web of the day jumbotron -->    
+        <div class="row no-gutter">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="carousel inner">
+                    <div class="carousel-item active">
+                        <img src="/images/windows-background.jpg" class="img-responsive fit-image">
+                        <div class="carousel-caption">
+                            <div class="wod-header">Website of the Day | September 14, 2020</div>
+                            <h2>facebook</h2>
+                            <button type="button" class="btn btn-outline-light btn-lg">Visit Website</button>
+                            <button type="button" class="btn btn-outline-light btn-lg">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>    
+        <div class="row mx-3 mt-5">
+            <h3>Newly Added Websites</h3>
         </div>
-        
-        <div class = "content">
-        <div id="webOfTheDay">
-            <h2>Website of the Day</h2>
-            <div id="siteDay">
-                <a href="websitepage" class="aPhold">Visit Site</a>
+        <div class="latest-list row mx-3">
+            <div class = "col xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="card">
+                    <img class = "card-img-top img-responsive" src="/images/logo-wikipedia.png" class="img-responsive list-image">
+                    <div class = "card-body">
+                        <h5 class="card-title card-web-name">Wikipedia</h5>
+                        <p class="card-text card-creator-name">wikimedia foundation</p>
+                        <p class="card-text card-web-categ">informational</p>
+                        <a href="/" class="btn btn-primary">Visit Website</a>
+                        <a href="/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>    
+            <div class = "col xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="card">
+                    <img class = "card-img-top img-responsive" src="/images/logo-wikipedia.png" class="img-responsive list-image">
+                    <div class = "card-body">
+                        <h5 class="card-title card-web-name">Wikipedia</h5>
+                        <p class="card-text card-creator-name">wikimedia foundation</p>
+                        <p class="card-text card-web-categ">informational</p>
+                        <a href="/" class="btn btn-primary">Visit Website</a>
+                        <a href="/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
             </div>
+            <div class = "col xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="card">
+                    <img class = "card-img-top img-responsive" src="/images/logo-wikipedia.png" class="img-responsive list-image">
+                    <div class = "card-body">
+                        <h5 class="card-title card-web-name">Wikipedia</h5>
+                        <p class="card-text card-creator-name">wikimedia foundation</p>
+                        <p class="card-text card-web-categ">informational</p>
+                        <a href="/" class="btn btn-primary">Visit Website</a>
+                        <a href="/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "col xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="card">
+                    <img class = "card-img-top img-responsive" src="/images/logo-wikipedia.png" class="img-responsive list-image">
+                    <div class = "card-body">
+                        <h5 class="card-title card-web-name">Wikipedia</h5>
+                        <p class="card-text card-creator-name">wikimedia foundation</p>
+                        <p class="card-text card-web-categ">informational</p>
+                        <a href="/" class="btn btn-primary">Visit Website</a>
+                        <a href="/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div> 
         </div>
-        <div id="mostPop">
-            <h2>Most Popular Websites</h2>
-            <div id="sitePop">
-                <a href="websitepage" class="aPhold">Visit Site</a>
+        <div class="row mx-3 mt-5">
+            <h3>Highest Rated Websites</h3>
+        </div>
+        <div class="highest-list row mx-3">
+            <div class = "col xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="card">
+                    <img class = "card-img-top img-responsive" src="/images/logo-wikipedia.png" class="img-responsive list-image">
+                    <div class = "card-body">
+                        <h5 class="card-title card-web-name">Wikipedia</h5>
+                        <p class="card-text card-creator-name">wikimedia foundation</p>
+                        <p class="card-text card-web-categ">informational</p>
+                        <a href="/" class="btn btn-primary">Visit Website</a>
+                        <a href="/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>    
+            <div class = "col xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="card">
+                    <img class = "card-img-top img-responsive" src="/images/logo-wikipedia.png" class="img-responsive list-image">
+                    <div class = "card-body">
+                        <h5 class="card-title card-web-name">Wikipedia</h5>
+                        <p class="card-text card-creator-name">wikimedia foundation</p>
+                        <p class="card-text card-web-categ">informational</p>
+                        <a href="/" class="btn btn-primary">Visit Website</a>
+                        <a href="/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div id="highRate">
-            <h2>Highest Rated Websites</h2>
-            <div id="siteHigh">
-                <a href="websitepage" class="aPhold">Visit Site</a>
-            </div>
-        </div>
-        </div>
+            <div class = "col xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="card">
+                    <img class = "card-img-top img-responsive" src="/images/logo-wikipedia.png" class="img-responsive list-image">
+                    <div class = "card-body">
+                        <h5 class="card-title card-web-name">Wikipedia</h5>
+                        <p class="card-text card-creator-name">wikimedia foundation</p>
+                        <p class="card-text card-web-categ">informational</p>
+                        <a href="/" class="btn btn-primary">Visit Website</a>
+                        <a href="/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "col xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="card">
+                    <img class = "card-img-top img-responsive" src="/images/logo-wikipedia.png" class="img-responsive list-image">
+                    <div class = "card-body">
+                        <h5 class="card-title card-web-name">Wikipedia</h5>
+                        <p class="card-text card-creator-name">wikimedia foundation</p>
+                        <p class="card-text card-web-categ">informational</p>
+                        <a href="/" class="btn btn-primary">Visit Website</a>
+                        <a href="/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div> 
+        </div>    
     </body>
 </html>

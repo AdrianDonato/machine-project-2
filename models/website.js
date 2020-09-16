@@ -18,6 +18,6 @@ let Website = mongoose.model("website", {
     tags: [String]
 })
 
-model.exports = {
+module.exports = {
     Website
 }

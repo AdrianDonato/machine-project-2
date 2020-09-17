@@ -3,27 +3,27 @@ const session = require("express-session")
 const bodyparser = require("body-parser")
 const cookieparser = require("cookie-parser")
 const mongoose = require("mongoose")
+const multer = require("multer")
+const GridFsStorage = require("multer-gridfs-storage")
+const Grid = require("gridfs-stream")
+const methodOverride = require("method-override")
 const app = express()
 const {User} = require("./models/user.js")
 const {Website} = require("./models/website.js")
 const urlencoder = bodyparser.urlencoded({
     extended:false
 })
+const mongoURI = "mongodb://127.0.0.1:27017/apdev-mp2-3-db"
+
+
+
 
 mongoose.connect("mongodb://127.0.0.1:27017/apdev-mp2-3-db",{
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
 
-User.find({}).then((docs)=>{
-        for(let i = 0; i < docs.length; i++){
-            console.log(JSON.stringify(docs[i]) + "\n")
-        }
-},(err)=>{
-    console.log("Error: " + err)
-})
 
-let s = 6
 
 
 app.use(session({

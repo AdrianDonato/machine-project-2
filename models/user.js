@@ -6,7 +6,8 @@ let User = mongoose.model("user", {
     email: String,
     role: String,
     firstname: String,
-    lastname: String
+    lastname: String,
+    userImg: String
 })
 
 module.exports = {

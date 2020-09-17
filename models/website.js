@@ -8,7 +8,7 @@ let Website = mongoose.model("website", {
     intro_text: String,
     website_desc: String,
     feature_list: [String],
-    overall_score: String,
+    overall_score: Number,
     avg_designscore: Number,
     avg_usabilityscore: Number,
     avg_contentscore: Number,

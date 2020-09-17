@@ -84,16 +84,17 @@
                 </div>   
                 <div class="col">
                     <div class="card-block px-5">
-                        <h1 class="card-title">{{websitename}}</h1>
-                        <p class="card-text upperlabel">{{creator}}</p>
-                        <p class="card-text web-introlabel"></p>
+                        <h1 class="card-title">Wikipedia</h1>
+                        <p class="card-text upperlabel">wikimedia foundation</p>
+                        <p class="card-text web-introlabel">A wiki that anyone can edit!</p>
                         <div class="taglist">
-                            {{#each tags}}
-                            <span class="taglabels">{{tags}}</span>
-                            {{/each}}
+                            <span class="taglabels">wiki</span>
+                            <span class="taglabels">encyclopedia</span>
+                            <span class="taglabels">e-learning</span>
+                            <span class="taglabels">community</span>
                         </div><br>
                         <div class="text-center">
-                        <a href="{{websiteurl}}" class="btn btn-primary">VISITE SITE</a>
+                        <a href="" class="btn btn-primary">VISITE SITE</a>
                         </div>
                     </div>
                 </div>
@@ -106,7 +107,7 @@
                 <h1>Overview</h1>
             </div>
             <div class = "col-lg-12 col-md-12 col-sm-12">
-                <p>{{websitedesc}}</p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
             </div>
         </div>
         <div class="row web-desc">
@@ -115,16 +116,21 @@
             </div>
             <div class = "col-lg-12 col-md12 col-sm-12">
                 <ul>
-                    {{#each features}}
-                    <li>{{features}}</li>
-                    {{/each}}
+                    <li>lorem ipsum</li>
+                    <li>lorem ipsum</li>
+                    <li>lorem ipsum</li>
+                    <li>lorem ipsum</li>
+                    <li>lorem ipsum</li>
+                    <li>lorem ipsum</li>
                 </ul>
             </div>
         </div>
+        
+        <hr style="width:80%;">
         <!--- image gallery tab -->
-        <div class="row web-desc pt-5">
+        <div class="row web-desc py-5">
             <div class = "col-lg-12 col-md-12 col-sm-12">
-                <h1>Image Gallery</h1>
+                <h1 class="pb-5">Image Gallery</h1>
             </div>
             <div class = "col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
                 <div id="web-image-gallery-carousel" class="carousel slide" data-ride="carousel">
@@ -150,23 +156,39 @@
                 </div>
             </div>
         </div>
+        
+        <hr style="width:80%;">
         <!--- reviews -->
         <div class="row web-desc pt-5">
             <div class = "col-lg-12 col-md-12 col-sm-12">
                 <h1>Reviews</h1>
             </div>
+            <ul class="overall-ratings">
+                <li>overall: 5.0</li>
+                <li>design: 5.0</li>
+                <li>usability: 5.0</li>
+                <li>content: 5.0</li>
+                <li>creativity: 5.0</li>
+                <li>trustworthiness: 5.0</li>
+            </ul>
             <div class="card-group" style="display:flex;flex-direction:column;">
                 <div class="card">
                     <div class="col-lg-12 col-md-12">
                         <div class="card-horizontal">
                             <div class="img-square-wrapper">
-                                <img class="review-profile-pic" src="/images/logo-wikipedia.png" alt="Card image cap">
-                                <p class="card-text">bobby</p>
-                                <p class="card-text">sep 17, 2020</p>
+                                <img class="review-profile-pic img-rounded img-fluid" src="/images/logo-wikipedia.png" alt="Card image cap">
                             </div>
                             <div class="card-body">
-                                <h4 class="card-title">Card title</h4>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text pb-3" style="vertical-align:text-top;">username</p>
+                                <ul class="ratings">
+                                    <li>overall: 5.0</li>
+                                    <li>design: 5.0</li>
+                                    <li>usability: 5.0</li>
+                                    <li>content: 5.0</li>
+                                    <li>creativity: 5.0</li>
+                                    <li>trustworthiness: 5.0</li>
+                                </ul>
+                                <p class="card-text">Dito nakalagay ang contents ng review.</p>
                             </div>
                         </div>
                     </div>
@@ -175,18 +197,25 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="card-horizontal">
                             <div class="img-square-wrapper">
-                                <img class="review-profile-pic" src="/images/logo-wikipedia.png" alt="Card image cap">
-                                <p class="card-text">bobby</p>
-                                <p class="card-text">sep 17, 2020</p>
+                                <img class="review-profile-pic img-rounded img-fluid" src="/images/logo-wikipedia.png" alt="Card image cap">
                             </div>
                             <div class="card-body">
-                                <h4 class="card-title">Card title</h4>
+                                <p class="card-text pb-3" style="vertical-align:text-top;">username</p>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class ="row webdesc text-center pt-5">
+                <div class = "col-lg-12 col-md-12 col-sm-12">
+                    Have something to tell about this site?
+                </div>
+                <div class = "col-lg-12 col-md-12 col-sm-12 pt-3">
+                    <a href="review" class="btn btn-primary">Review this Website!</a>
+                </div>
+            </div>
+            
         </div>
     </body>
 </html>

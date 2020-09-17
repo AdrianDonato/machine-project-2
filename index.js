@@ -10,6 +10,7 @@ const methodOverride = require("method-override")
 const app = express()
 const {User} = require("./models/user.js")
 const {Website} = require("./models/website.js")
+const {Review} = require("./models/review")
 const urlencoder = bodyparser.urlencoded({
     extended:false
 })
@@ -155,7 +156,7 @@ else{
 
 app.get("/websitepage", function(req,res)
 {
-
+    
     if (req.session.username){
         res.render("websitepage.hbs",{
             rightoption1: "ACCOUNT",
@@ -212,7 +213,20 @@ app.get("/reviewdetails", function(req,res){
         review : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     })
 })
-app.post("/review", function(req,res){
+app.post("/review", urlencoder,function(req,res){
+
+    
+    let review = new Review({
+        date: Date.now(),
+        username: req.session.username,
+        websitename: req.session.websitename,
+        designscore: req.body.design,
+        usabilityscore: req.body.usability,
+        contentscore: req.body.content,
+        creativityscore: req.body.creativity,
+        trustscore: req.bodytrust,
+        review: req.body.review
+    })
    res.redirect("/")
 })
 

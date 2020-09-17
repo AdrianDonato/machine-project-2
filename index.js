@@ -99,7 +99,7 @@ app.get("/register", function(req,res)
 {
     res.render("register.hbs",{
         rightoption1: "SIGN UP",
-        url1: "registerpage",
+        url1: "register",
         rightoption2: "LOG IN",
         url2: "loginpage"
     })

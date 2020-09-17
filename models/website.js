@@ -7,6 +7,7 @@ let Website = mongoose.model("website", {
     category: String,
     intro_text: String,
     website_desc: String,
+    web_of_the_day: Boolean,
     feature_list: [String],
     overall_score: Number,
     avg_designscore: Number,

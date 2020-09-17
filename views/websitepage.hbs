@@ -84,17 +84,16 @@
                 </div>   
                 <div class="col">
                     <div class="card-block px-5">
-                        <h1 class="card-title">Wikipedia</h1>
-                        <p class="card-text upperlabel">wikimedia foundation</p>
-                        <p class="card-text web-introlabel">A wiki that anyone can edit!</p>
+                        <h1 class="card-title">{{websitename}}</h1>
+                        <p class="card-text upperlabel">{{creator}}</p>
+                        <p class="card-text web-introlabel"></p>
                         <div class="taglist">
-                            <span class="taglabels">wiki</span>
-                            <span class="taglabels">encyclopedia</span>
-                            <span class="taglabels">e-learning</span>
-                            <span class="taglabels">community</span>
+                            {{#each tags}}
+                            <span class="taglabels">{{tags}}</span>
+                            {{/each}}
                         </div><br>
                         <div class="text-center">
-                        <a href="" class="btn btn-primary">VISITE SITE</a>
+                        <a href="{{websiteurl}}" class="btn btn-primary">VISITE SITE</a>
                         </div>
                     </div>
                 </div>
@@ -107,7 +106,7 @@
                 <h1>Overview</h1>
             </div>
             <div class = "col-lg-12 col-md-12 col-sm-12">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                <p>{{websitedesc}}</p>
             </div>
         </div>
         <div class="row web-desc">
@@ -116,12 +115,9 @@
             </div>
             <div class = "col-lg-12 col-md12 col-sm-12">
                 <ul>
-                    <li>lorem ipsum</li>
-                    <li>lorem ipsum</li>
-                    <li>lorem ipsum</li>
-                    <li>lorem ipsum</li>
-                    <li>lorem ipsum</li>
-                    <li>lorem ipsum</li>
+                    {{#each features}}
+                    <li>{{features}}</li>
+                    {{/each}}
                 </ul>
             </div>
         </div>

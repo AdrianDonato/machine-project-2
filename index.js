@@ -107,22 +107,29 @@ app.get("/register", function(req,res)
 
 app.get("/", function(req,res)
 {
-    if (req.session.username){
-    res.render("index.hbs",{
-        rightoption1: "ACCOUNT",
-        url1: "userprofile",
-        rightoption2: "LOG OUT",
-        url2: "signout"
+    Website.find({}).then((docs)=>{
+        if (req.session.username){
+            res.render("index.hbs",{
+                rightoption1: "ACCOUNT",
+                url1: "userprofile",
+                rightoption2: "LOG OUT",
+                url2: "signout",
+                websites: docs            
+            })
+        }   
+        else{
+            res.render("index.hbs",{
+                rightoption1: "SIGN UP",
+                url1: "register",
+                rightoption2: "LOG IN",
+                url2: "loginpage",
+                websites: docs
+            })
+        }
+    },(err)=>{
+        console.log(err)
     })
-}
-else{
-    res.render("index.hbs",{
-        rightoption1: "SIGN UP",
-        url1: "register",
-        rightoption2: "LOG IN",
-        url2: "loginpage"
-    })
-}
+   
 })
 
 
@@ -148,16 +155,13 @@ else{
 
 app.get("/websitepage", function(req,res)
 {
+
     if (req.session.username){
         res.render("websitepage.hbs",{
             rightoption1: "ACCOUNT",
             url1: "userprofile",
             rightoption2: "LOG OUT",
             url2: "signout",
-            websitename : "Sample Website",
-            websitecategory : "Informational",
-            websitelink : "sample url",
-            rating : "4.7"
         })
     }
     else{
@@ -166,10 +170,7 @@ app.get("/websitepage", function(req,res)
             url1: "register",
             rightoption2: "LOG IN",
             url2: "loginpage",
-            websitename : "Sample Website",
-            websitecategory : "Informational",
-            websitelink : "sample url",
-            rating : "4.7"
+           
         })
     }
 })
@@ -309,6 +310,7 @@ app.post("/register", urlencoder, function (req,res){
     let email = req.body.em
     let fname = req.body.fname
     let lname = req.body.lname
+
     if (username.trim()=="" || password.trim()=="" || email.trim()==""){
         res.render("register.hbs",{
             error:"Please input the empty field/s.",
@@ -327,7 +329,7 @@ app.post("/register", urlencoder, function (req,res){
         })
     }else{
         
-        if(isAvailable(username)){
+        if(!isAvailable(username)){
             res.render("register.hbs",{
                 error:"Username is already taken",
                 rightoption1: "SIGN UP",
@@ -342,7 +344,8 @@ app.post("/register", urlencoder, function (req,res){
             email: email,
             role: "user",
             firstname: fname,
-            lastname:lname
+            lastname:lname,
+            profilepic: req.body.userImg
         })
 
            user.save().then((doc)=>{

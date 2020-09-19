@@ -1,0 +1,130 @@
+body{
+    overflow-x:hidden;
+}
+.fit-image{
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+}
+
+#wod-header{
+    top: 0;
+    bottom: auto;
+}
+
+.list-image{
+    object-fit:scale-down;
+    width: 80%;
+    height: 250px;
+}
+
+.long-textbar{
+    width: 500px;
+}
+
+.no-margin-padding{
+    margin:0;
+    padding:0;
+}
+
+.webheader-image{
+    width: 230px;
+    height: 230px;
+}
+
+.review-profile-pic{
+    width:100px;
+    height:100px;
+}
+
+.webheader-jumbotron-image{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.webdesc-gallery-image{
+    width:782px;
+    height:350px;
+    object-fit:cover;
+}
+
+.taglabels{
+    background-color:darkblue;
+    font-size:0.95rem;
+    color:white;
+    border-radius: 5px;
+    padding:5px
+}
+
+.webheader-cardborder{
+    margin-left: 50px;
+}
+
+.web-introlabel{
+    font-size:1.3rem;
+}
+
+.upperlabel{
+    font-size:0.95rem;
+    font-weight:bold;
+}
+
+.web-desc{
+    padding-left:150px;
+    padding-right:150px;
+    text-align:justify;
+}
+
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+nav > .nav.nav-tabs{
+
+    border: none;
+      color:#fff;
+      background:#272e38;
+      border-radius:0;
+  
+  }
+  nav > div a.nav-item.nav-link,
+  nav > div a.nav-item.nav-link.active
+  {
+    border: none;
+      padding: 18px 25px;
+      color:#fff;
+      background:#272e38;
+      border-radius:0;
+  }
+  
+  nav > div a.nav-item.nav-link.active:after
+   {
+    content: "";
+    position: relative;
+    bottom: -60px;
+    left: -10%;
+    border: 15px solid transparent;
+    border-top-color: #bdbdbd;
+  }
+
+  .tab-content{
+    background: #fdfdfd;
+      line-height: 25px;
+      border: 1px solid #ddd;
+      border-top:5px solid #bdbdbd;
+      border-bottom:5px solid #bdbdbd;
+      padding:30px 25px;
+  }
+  
+  nav > div a.nav-item.nav-link:hover,
+  nav > div a.nav-item.nav-link:focus
+  {
+    border: none;
+      background: #bdbdbd;
+      color:#fff;
+      border-radius:0;
+      transition:background 0.20s linear;
+  }
+
